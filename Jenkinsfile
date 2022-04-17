@@ -4,7 +4,7 @@ pipeline{       //jenkins file start with it
         stage("sonarquality check"){  //sonar quality check stage
             agent {  
                 docker {
-                    image 'openjdk:11' //for running gradle we need java which we run as docker container
+                    image 'openjdk:8' //for running gradle we need java which we run as docker container
                 }
             }
             steps{
