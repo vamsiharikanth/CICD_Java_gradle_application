@@ -9,7 +9,7 @@ pipeline{       //jenkins file start with it
             }
             steps{
                 script{
-                     withSonarQubeEnv(credentialsId: 'sonar-token') { // from syntax generator in jenkins
+                     withSonarQubeEnv(credentialsId: 'mysonar') { // from syntax generator in jenkins
                             sh 'chmod +x gradlew' // execute permissions for gradlew script
                             sh './gradlew sonarqube'  // pushes gradlew to sonarqube and execute there
                      }
